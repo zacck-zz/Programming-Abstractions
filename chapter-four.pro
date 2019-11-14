@@ -228,7 +228,8 @@ PRECOMPILED_HEADER = $$files($$PWD/lib/StanfordCPPLib/private/precompiled.h)
 # But then that causes the files to be added twice because of *.cpp/h rules below.
 # To get around this, we follow the first 'SOURCES *=' line by a line that clears
 # out SOURCES, so that the Qt Creator .pro modification is ineffectual.
-DISTFILES *= ""
+DISTFILES *= "" \
+    res/numbers.txt
 DISTFILES = ""
 HEADERS *= "" \
     src/precisionexample.h \
