@@ -2,5 +2,6 @@
 #define SHOWFILECONTENTS_H
 
 std::string promptForFile(std::ifstream & infile, std::string prompt);
+int stringToInt(std::string str);
 
 #endif // SHOWFILECONTENTS_H

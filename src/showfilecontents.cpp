@@ -7,6 +7,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
 
 /*
  * Function: promptForFile
@@ -19,7 +20,7 @@
 
 std::string promptForFile(std::ifstream & infile, std::string prompt){
     while (true){
-        std::cout << prompt;
+        std::cout << prompt << "\n";
         std::string filename;
         getline(std::cin, filename);
         infile.open(filename.c_str());
@@ -29,3 +30,21 @@ std::string promptForFile(std::ifstream & infile, std::string prompt){
         if (prompt == "" ) prompt = "Input File: ";
     }
 }
+
+
+/*
+ * Function stringToInt
+ * ----------------------
+ * usage: int x = stringToInt(st);
+ * Uses the c++ stream libraries to read an integer from a string
+ */
+int stringToInt(std::string str){
+    std::istringstream stream(str);
+    int value;
+    stream >> value >> std::ws;
+    if(stream.fail() || !stream.eof()) {
+        std::cout << "stringToInt: Illegal integer format \n" << str << " \n";
+    }
+    return value;
+}
+
