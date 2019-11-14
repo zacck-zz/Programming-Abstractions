@@ -35,11 +35,7 @@ void runPrecision() {
 void runFileReader() {
     std::ifstream infile;
     promptForFile(infile, "Input file: \n");
-    while(true){
-        int ch = infile.get();
-        if(ch == EOF) break;
-        std::cout.put(ch);
-    }
+    copyStream(infile, std::cout);
     infile.close();
 }
 

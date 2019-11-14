@@ -71,3 +71,18 @@ int getInt(std::string prompt){
     }
     return value;
 }
+
+
+/*
+ * Function: copyStream
+ * ---------------------
+ * usage copyStream(instream, outstream)
+ * Copy's the input from an input stream into an output stream
+ */
+void copyStream(std::istream & is, std::ostream & os){
+    while(true){
+        int ch = is.get();
+        if (ch == EOF) break;
+        os.put(ch);
+    }
+}
