@@ -3,5 +3,6 @@
 
 std::string promptForFile(std::ifstream & infile, std::string prompt);
 int stringToInt(std::string str);
+int getInt(std::string str);
 
 #endif // SHOWFILECONTENTS_H

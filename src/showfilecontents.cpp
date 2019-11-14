@@ -48,3 +48,26 @@ int stringToInt(std::string str){
     return value;
 }
 
+
+/*
+ * Function getInt
+ * -------------------
+ * usage int n = getInt(prompt)
+ * Requests an integer from the user using the console. It prints a prompt
+ * then waits for the user to enter a line of data. If that lines contains a
+ * single intehger, the function returns the corresponding value. If not
+ * it gives the user a chance to enter the input again
+ */
+int getInt(std::string prompt){
+    int value;
+    std::string line;
+    while(true){
+        std::cout << prompt;
+        getline(std::cin, line);
+        std::istringstream stream(line);
+        stream >> value;
+        if(!stream.fail() && stream.eof()) break;
+        std::cout << "Illegal integer format. Try Again Please." << std::endl;
+    }
+    return value;
+}
