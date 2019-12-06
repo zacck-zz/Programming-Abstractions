@@ -8,7 +8,7 @@ void runPrecision();
 void runFileReader();
 void sumFileNumbers();
 
-int main() {
+int hello() {
     int p = getInt("Give a valid integer please: \n");
     std::cout << p << std::endl;
     std::cout << "Precision Examples" << std::endl;

@@ -233,12 +233,15 @@ DISTFILES *= "" \
 DISTFILES = ""
 HEADERS *= "" \
     src/precisionexample.h \
+    src/reversefile.h \
     src/showfilecontents.h \
     src/showfilecontents.hpp
 HEADERS = ""
 SOURCES *= "" \
+    src/collections_tut.cpp \
     src/precisionexample.cpp \
     src/readfile.cpp \
+    src/reversefile.cpp \
     src/showfilecontents.cpp
 SOURCES = ""
 
