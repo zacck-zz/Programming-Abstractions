@@ -6,13 +6,16 @@
 #include "stack_calculator.h"
 #include "stack.h"
 #include "strlib.h"
+#include "checkoutline.h"
 using namespace std;
 
 void printFileLines();
 void showLetters();
 void runCalculator();
+void runQueueSim();
 
 int main() {
+   runQueueSim();
    runCalculator();
    printFileLines();
    showLetters();
@@ -60,4 +63,12 @@ void runCalculator(){
         }
     }
 
+}
+
+void runQueueSim(){
+    int nServed;
+    int totalWait;
+    int totalLength;
+    runSimulation(nServed, totalWait, totalLength);
+    printReport(nServed, totalWait, totalLength);
 }
