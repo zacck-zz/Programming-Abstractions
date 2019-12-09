@@ -7,6 +7,7 @@
 #include "stack.h"
 #include "strlib.h"
 #include "checkoutline.h"
+#include "airportcodes.h"
 using namespace std;
 
 void printFileLines();
@@ -15,6 +16,7 @@ void runCalculator();
 void runQueueSim();
 
 int main() {
+   runAirportLookUp();
    runQueueSim();
    runCalculator();
    printFileLines();
