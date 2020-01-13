@@ -2,3 +2,5 @@
 #define PIGENGLISH_H
 
 #endif // PIGENGLISH_H
+
+void printPigEnglishWords();
