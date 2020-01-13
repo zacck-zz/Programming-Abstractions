@@ -5,6 +5,7 @@
  */
 #include "vector.h"
 #include "collections_ex.h"
+#include <math.h>
 
 double mean(Vector<double> & data){
     double total = 0;
@@ -18,4 +19,26 @@ double mean(Vector<double> & data){
     double mean = total / data.size();
 
     return mean;
+}
+
+
+double stddev(Vector<double> & data){
+    // find the mean
+    double deviation;
+    double m = mean(data);
+
+    double sqdifftotal = 0;
+
+    //acculate the differences from mean
+    for(auto item : data ){
+        double meandiff = m - item;
+        sqdifftotal += meandiff * meandiff;
+    }
+
+    // find deviation
+    sqdifftotal = sqdifftotal / data.size();
+
+    deviation = sqrt(sqdifftotal);
+
+    return deviation;
 }
