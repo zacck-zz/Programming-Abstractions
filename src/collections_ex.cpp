@@ -91,3 +91,24 @@ void printHistogram(Vector<double> & data){
     }
 
 }
+
+
+Vector<int> eratosthenePrimes(int max){
+    Vector<int> primes;
+
+    // list all numbers from 2 to the max
+    for(int i = 2; i <= max; i++){
+        primes.add(i);
+    }
+
+
+    for(int n = 0; n < primes.size(); n++){
+        for(int k = primes.size() - 1; k > n; k--){
+           if(primes[k] % primes[n] == 0){
+               primes.remove(k);
+           }
+        }
+    }
+
+    return primes;
+}

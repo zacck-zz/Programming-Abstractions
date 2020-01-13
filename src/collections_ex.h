@@ -7,4 +7,6 @@ double stddev(Vector<double> & data);
 
 void printHistogram(Vector<double> & data);
 
+Vector<int> eratosthenePrimes(int max);
+
 #endif // COLLECTIONS_EX_H
