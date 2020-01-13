@@ -235,6 +235,7 @@ DISTFILES = ""
 HEADERS *= "" \
     src/airportcodes.h \
     src/checkoutline.h \
+    src/collections_ex.h \
     src/excercise.h \
     src/pigenglish.h \
     src/precisionexample.h \
@@ -247,6 +248,7 @@ SOURCES *= "" \
     src/airportcodes.cpp \
     src/chartype.cpp \
     src/checkoutline.cpp \
+    src/collections_ex.cpp \
     src/collections_tut.cpp \
     src/excercise.cpp \
     src/pigenglish.cpp \
