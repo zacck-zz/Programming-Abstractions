@@ -229,20 +229,32 @@ PRECOMPILED_HEADER = $$files($$PWD/lib/StanfordCPPLib/private/precompiled.h)
 # To get around this, we follow the first 'SOURCES *=' line by a line that clears
 # out SOURCES, so that the Qt Creator .pro modification is ineffectual.
 DISTFILES *= "" \
+    res/airportcodes.txt \
     res/numbers.txt
 DISTFILES = ""
 HEADERS *= "" \
+    src/airportcodes.h \
+    src/checkoutline.h \
+    src/excercise.h \
+    src/pigenglish.h \
     src/precisionexample.h \
     src/reversefile.h \
     src/showfilecontents.h \
-    src/showfilecontents.hpp
+    src/showfilecontents.hpp \
+    src/stack_calculator.h
 HEADERS = ""
 SOURCES *= "" \
+    src/airportcodes.cpp \
+    src/chartype.cpp \
+    src/checkoutline.cpp \
     src/collections_tut.cpp \
+    src/excercise.cpp \
+    src/pigenglish.cpp \
     src/precisionexample.cpp \
     src/readfile.cpp \
     src/reversefile.cpp \
-    src/showfilecontents.cpp
+    src/showfilecontents.cpp \
+    src/stack_calculator.cpp
 SOURCES = ""
 
 # include various source .cpp files and header .h files in the build process
