@@ -8,6 +8,7 @@
 #include "strlib.h"
 #include "checkoutline.h"
 #include "airportcodes.h"
+#include "pigenglish.h"
 using namespace std;
 
 void printFileLines();
@@ -16,6 +17,7 @@ void runCalculator();
 void runQueueSim();
 
 int main() {
+   printPigEnglishWords();
    runAirportLookUp();
    runQueueSim();
    runCalculator();
