@@ -53,3 +53,12 @@ string Pointy::toString() {
     return "(" + integerToString(x) + "," + integerToString(y) + ")";
 }
 
+/*
+ * Overloaded <<
+ * -------------
+ * Input operator overloaded to enable printing of the Pointy instance
+ */
+ostream & operator<<(ostream & os, Pointy pt) {
+    return os << pt.toString();
+}
+

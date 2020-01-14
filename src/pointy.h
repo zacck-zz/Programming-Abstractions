@@ -40,6 +40,12 @@ public:
  */
     std::string toString();
 
+/*
+ * Method: <<
+ * Usage ostream = << pt
+ */
+    std::ostream & operator<<(std::ostream & os);
+
 private:
     int x;  // the x coordinate
     int y;  // the y coordinate
