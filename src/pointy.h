@@ -46,6 +46,15 @@ public:
  */
     std::ostream & operator<<(std::ostream & os);
 
+
+/*
+ * Method: ===
+ * Usage: bool b = pt1 == pt2
+ * --------------------------
+ * Determines equality between two points
+ */
+    friend bool operator==(Pointy p1, Pointy p2);
+
 private:
     int x;  // the x coordinate
     int y;  // the y coordinate

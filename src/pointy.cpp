@@ -62,3 +62,12 @@ ostream & operator<<(ostream & os, Pointy pt) {
     return os << pt.toString();
 }
 
+/*
+ * Overlloaded ==
+ * ---------------
+ * Equality operator to check that two pointy points are equal
+ */
+bool operator==(Pointy p1, Pointy p2){
+    return p1.x == p2.x && p1.y == p2.y;
+}
+
