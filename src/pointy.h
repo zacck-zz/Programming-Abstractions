@@ -55,6 +55,14 @@ public:
  */
     friend bool operator==(Pointy p1, Pointy p2);
 
+/*
+ * Method: !=
+ * Usage: bool b = p1 != pt2
+ * -------------------------
+ * Determines unequality between two points
+ */
+    friend bool operator!=(Pointy p1, Pointy p2);
+
 private:
     int x;  // the x coordinate
     int y;  // the y coordinate
