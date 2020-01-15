@@ -5,7 +5,8 @@
  */
 
 #include <string>
-#include "direction.h"
+#include "directiony.h"
+
 using namespace std;
 
 
@@ -15,15 +16,15 @@ using namespace std;
  * These functions use the remainder operator to cycle through the internal
  * values of the enumeration type. Note that the leftFrom function cannot 
  * subtract 1 from the direction because the result might then be negative; 
- * Adding 3 achives the same effect but ensures that the values remain positive.
+ * Adding 3 achieves the same effect but ensures that the values remain positive.
  */
 
-Direction leftFrom(Direction dir) {
-	return Direction((dir + 3) % 4);
+Directiony leftFrom(Directiony dir) {
+    return Directiony((dir + 3) % 4);
 }
 
-Direction rightFrom(Direction dir) {
-	return Direction((dir + 1) % 4);
+Directiony rightFrom(Directiony dir) {
+    return Directiony((dir + 1) % 4);
 }
 
 
@@ -35,7 +36,7 @@ Direction rightFrom(Direction dir) {
  * legal values.
  */
 
-string directionToString(Direction dir) {
+string directionToString(Directiony dir) {
 	switch (dir) {
 		case NORTH: return "NORTH";
 		case EAST: return "EAST";
@@ -43,4 +44,25 @@ string directionToString(Direction dir) {
 		case WEST: return "WEST";
 		default: return "??????";
 	}
+}
+
+
+/*
+ * <<
+ * --
+ * Insertion operator for the direction enumeration tue
+ */
+ostream & operator<<(ostream & os, Directiony dir){
+    return os << directionToString(dir);
+}
+
+/*
+ * ++
+ * ----
+ * Increment operator for the direction enum
+ */
+Directiony operator++(Directiony & dir, int) {
+    Directiony old = dir;
+     dir = Directiony(dir + 1);
+     return old;
 }

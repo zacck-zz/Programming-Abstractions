@@ -5,8 +5,8 @@
  * are the four compass points: NORTH, EAST, SOUTH and WEST.
  */
 
-#ifndef _direction_h
-#define _direction_h
+#ifndef _directiony_h
+#define _directiony_h
 
 #include <string>
 
@@ -16,7 +16,7 @@
  * This enumerated type is used to represent the four compass directions.
  */
 
-enum Direction { NORTH, EAST, SOUTH, WEST };
+enum Directiony { NORTH, EAST, SOUTH, WEST };
 
 /*
  * Function: leftFrom 
@@ -26,7 +26,7 @@ enum Direction { NORTH, EAST, SOUTH, WEST };
  * For example leftFrom(WEST) returns SOUTH.
  */
 
-Direction leftFrom(Direction dir);
+Directiony leftFrom(Directiony dir);
 
 
 /*
@@ -37,7 +37,7 @@ Direction leftFrom(Direction dir);
  * For example rightFrom(NORTH) returns EAST.
  */
 
-Direction rightFrom(Direction dir);
+Directiony rightFrom(Directiony dir);
 
 /*
  * Function: directionToString
@@ -46,6 +46,23 @@ Direction rightFrom(Direction dir);
  * Returns the name of the direction as a string.
  */
 
-std::string directionToString(Direction dir);
+std::string directionToString(Directiony dir);
+
+
+/*
+ * Function: <<
+ * ------------
+ * Overloaded insertion operator for the direction enum
+ */
+std::ostream & operator<<(std::ostream & os, Directiony dir);
+
+
+/*
+ * Function: ++
+ * ------------
+ * Overloaded increment operator for the direction enum
+ * Notice we don't need parameter name if we wont use that value
+ */
+Directiony operator++(Directiony & dir, int);
 
 #endif
