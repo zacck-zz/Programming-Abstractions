@@ -18,7 +18,7 @@ void runCalculator();
 void runQueueSim();
 void runExcercises();
 
-int main() {
+int emmy() {
    runExcercises();
    /* printPigEnglishWords();
    runAirportLookUp();
@@ -97,9 +97,7 @@ void runCalculator(){
 }
 
 void runQueueSim(){
-    int nServed;
-    int totalWait;
-    int totalLength;
-    runSimulation(nServed, totalWait, totalLength);
-    printReport(nServed, totalWait, totalLength);
+    CheckoutlineSimulation cls;
+    cls.runSimulation();
+    cls.printReport();
 }

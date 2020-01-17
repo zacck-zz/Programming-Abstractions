@@ -35,6 +35,7 @@
 #include <iomanip>
 #include "queue.h"
 #include "random.h"
+#include "checkoutline.h"
 using namespace std;
 
 /* Constants */
@@ -42,6 +43,8 @@ const double ARRIVAL_PROBABILITY = 0.05;
 const int MIN_SERVICE_TIME  = 5;
 const int MAX_SERVICE_TIME = 15;
 const int SIMULATION_TIME = 2000;
+
+
 
 /*
  * Function: runSimulation
@@ -52,7 +55,7 @@ const int SIMULATION_TIME = 2000;
  * and the sum of the queue length in each time step are returned
  * through the reference parameters.
  */
-void runSimulation(int & nServed, int & totalWait, int & totalLength){
+void CheckoutlineSimulation::runSimulation(){
     Queue<int> queue;
     int timeRemaining = 0;
     nServed = 0;
@@ -79,7 +82,7 @@ void runSimulation(int & nServed, int & totalWait, int & totalLength){
  * ---------------------------------------------------
  * This function reports the result of the simulation
  */
-void printReport(int nServed, int totalWait, int totalLength){
+void CheckoutlineSimulation::printReport(){
     cout << "Simulation results given the following constants:" << endl;
     cout << fixed << setprecision(2);
     cout << " SIMULATION TIME: " << setw(4)
