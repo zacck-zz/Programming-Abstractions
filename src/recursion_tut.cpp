@@ -9,9 +9,22 @@ int fact(int n);
 void fibby();
 bool isPalindrome(string str);
 bool isSubstringPalindrome(string str, int p1, int p2);
+bool isEven(unsigned int n);
+bool isOdd(unsigned int n);
 
 
 int main(){
+
+    cout << "Determining if a  number is odd through mutual recursion" << endl;
+
+    unsigned int n = 1856;
+
+    if(isEven(n)) {
+        cout << n << " is even";
+    } else {
+        cout << n  << " is odd";
+    }
+
 
     Vector<string> vec {"Zacck", "Carla", "Rose", "Vanessa", "Janet", "Christa", "Charlie", "Vian", "David"};
 
@@ -88,4 +101,31 @@ bool isSubstringPalindrome(string str, int p1, int p2) {
 }
 
 
+/* Mutual Recursion */
+
+/*
+ * Function: isOdd
+ * Usage: if(isOdd(n)) ....
+ * ------------------------
+ * Returns true of the unsigned number n is odd. A number is off if it is not even.
+ */
+bool isOdd(unsigned int n) {
+    return !isEven(n);
+}
+
+
+/*
+ * Function: isEven
+ * Usage: if (isEven(n))....
+ * -------------------------
+ * Returns true if the unsigned number n is even. A number is
+ * even either (1) if it is zero or (2) if its predecessor is odd.
+ */
+bool isEven(unsigned int n) {
+    if(n == 0) {
+        return true;
+    } else {
+        return isOdd(n - 1);
+    }
+}
 
