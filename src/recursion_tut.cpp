@@ -1,6 +1,8 @@
 #include <iostream>
 #include <iomanip>
 #include "fib.h"
+#include "binarysearch.h"
+#include "vector.h"
 using namespace std;
 
 int fact(int n);
@@ -8,7 +10,17 @@ void fibby();
 bool isPalindrome(string str);
 bool isSubstringPalindrome(string str, int p1, int p2);
 
+
 int main(){
+
+    Vector<string> vec {"Zacck", "Carla", "Rose", "Vanessa", "Janet", "Christa", "Charlie", "Vian", "David"};
+
+    // sort the vector
+    vec.sort();
+
+
+    cout << "Running binary search" << endl << "Rose is in position: " << findInSortedVector("Rose", vec) << endl << endl;
+
     fibby();
 
     if(isPalindrome("eye")) {
@@ -74,4 +86,6 @@ bool isSubstringPalindrome(string str, int p1, int p2) {
         return str[p1] == str[p2] && isSubstringPalindrome(str, p1 + 1, p2 -1);
     }
 }
+
+
 
